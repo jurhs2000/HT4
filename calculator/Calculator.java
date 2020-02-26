@@ -2,10 +2,27 @@
 //Julio Herrera
 public class Calculator implements iCalculator{
 
+	/**
+	 * A static Calculator to be the unic instance
+	 */
+	private static Calculator calculator;
+
 	/*
 	 * for singleton implementation a private constructor is implemented
 	*/
 	private Calculator() {}
+
+	/**
+	 * A static method to instance the unic calculator or get it
+	 * pre: --
+	 * @post: it can return null
+	 */
+	public static Calculator getCalculator() {
+		if (calculator==null) {
+			calculator = new Calculator();
+		}
+		return calculator;
+	}
 
 	/**
 	 * suma los parametros y los devuelve

@@ -30,7 +30,7 @@ public class Main {
 	}
 
 	public static void main(final String[] args) {
-        System.out.println("CALCULADORA POSTFIX\n");
+        System.out.println("calculator POSTFIX\n");
         System.out.println("Eliga el tipo de pila que quiere utlizar:");
         System.out.println("1. ArrayList\n2. Vector\n3. Lista");
         Scanner scan = new Scanner(System.in);
@@ -45,10 +45,10 @@ public class Main {
         }
 		try {
 			final String[] lista = lectorDeTexto();
-			final iCalculator calculadora = new Calculator(); // ESTA ES LA LINEA DONDE SE DECLARA NUESTRA CLASE CALCULADORA
-			//final iStack<Integer> stack = new Stack<Integer>(); // ESTA ES LA LINEA DONDE SE DECLARA NUESTRA CLASE STACK
-            StackFactory<String> factory = new StackFactory<String>();
-            Stack<String> stack = factory.getStack(stackType, listType);
+			//final iCalculator calculator = new Calculator(); // ESTA ES LA LINEA DONDE SE DECLARA NUESTRA CLASE calculator
+			iCalculator calculator = Calculator.getCalculator(); //Singleton
+			StackFactory<Integer> factory = new StackFactory<Integer>();
+            Stack<Integer> stack = factory.getStack(stackType, listType);
             int a = 0, b = 0;
 
 			boolean verificador1 = false;
@@ -75,25 +75,25 @@ public class Main {
 						if (c.equals("+")) {
 							a = stack.pop();
 							b = stack.pop();
-							stack.push(calculadora.suma(a, b));
+							stack.push(calculator.suma(a, b));
 						}
 
 						if (c.equals("-")) {
 							a = stack.pop();
 							b = stack.pop();
-							stack.push(calculadora.resta(a, b));
+							stack.push(calculator.resta(a, b));
 						}
 
 						if (c.equals("*")) {
 							a = stack.pop();
 							b = stack.pop();
-							stack.push(calculadora.multiplicacion(a, b));
+							stack.push(calculator.multiplicacion(a, b));
 						}
 
 						if (c.equals("/")) {
 							a = stack.pop();
 							b = stack.pop();
-							stack.push(calculadora.division(a, b));
+							stack.push(calculator.division(a, b));
 						}
 					} else {
 						stack.push(Integer.parseInt(c));
