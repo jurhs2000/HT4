@@ -104,7 +104,7 @@ public E getLast() {
 }
 
 public E peek() {
-	return getLast();
+	return head.value();
 }
 
 // Necesario implementar para Stack
