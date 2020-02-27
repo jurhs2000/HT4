@@ -1,3 +1,7 @@
+/**
+ * 
+ * @param <E>
+ */
 class StackFactory<E> {
   //se utiliza el patron Factory
   

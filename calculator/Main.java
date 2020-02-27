@@ -56,9 +56,9 @@ public class Main {
 		fr = new FileReader(file);
 		final BufferedReader br = new BufferedReader(fr);
 		String[] lineList = null;
-
-		while (br.readLine() != null) {
-			lineList = br.readLine().split(" ");
+		String line = "";
+		while ((line = br.readLine()) != null) {
+			lineList = line.split(" ");
 		}
 
 		br.close();
