@@ -16,4 +16,11 @@ public abstract class abstractList<E> implements List<E>, Stack<E>{
 	{
 		return -1 != indexOf(value);
 	}
+	
+	public boolean empty()
+	// post: returns true iff list has no elements
+	{
+		return size() == 0;
+	}
+	
 }

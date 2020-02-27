@@ -27,7 +27,7 @@ public class CircularList<E> extends abstractList<E>{
 		count++;
 	}
 
-
+	// Necesario implementar para Stack
 	public void addLast(E value)
 	// pre: value non-null
 	// post: adds element to tail of list
@@ -36,9 +36,21 @@ public class CircularList<E> extends abstractList<E>{
 		addFirst(value);
 		tail = tail.next();
 	}
+	/**
+	 * 
+	 */
+	public void push(E value) {
+		addLast(value);
+	}
 
+	/**
+	 * 
+	 */
+	public E peek() {
+		return tail.value();
+	}
 
-	// lo dificil es quitar el elemento de la cola
+	// Necesario implementar para Stack
 
 	public E removeLast()
 	// pre: !isEmpty()
@@ -60,11 +72,15 @@ public class CircularList<E> extends abstractList<E>{
 		count--;
 		return temp.value();
 	}
+	
+	public E pop() {
+		return removeLast();
+	}
 
 	@Override
 	public int size() {
 		// TODO Auto-generated method stub
-		return 0;
+		return count;
 	}
 
 	@Override
@@ -78,7 +94,7 @@ public class CircularList<E> extends abstractList<E>{
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	// Necesario implementar para Stack
 	@Override
 	public E getLast() {
 		// TODO Auto-generated method stub
