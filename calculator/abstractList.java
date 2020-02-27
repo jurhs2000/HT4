@@ -1,4 +1,4 @@
-public abstract class abstractList<E> implements List<E> {
+public abstract class abstractList<E> implements List<E>{
 	public abstractList()
 	// post: does nothing
 	{
