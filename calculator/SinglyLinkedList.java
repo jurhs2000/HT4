@@ -1,3 +1,10 @@
+/**
+ * Parte del codigo obtenida por medio del capitulo 9
+ * "Lists'Bailey, D. (2007). Java Structures. New York: McGraw-Hill"
+ * Modificaciones de metodos, logica, implementaciones, estructura, etc
+ * @author Julio Herrera
+ * @author Jose Hurtarte
+ */
 import java.util.Iterator;
 //import static org.junit.Assert.*;
 

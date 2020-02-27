@@ -1,3 +1,13 @@
+/**
+ * 
+ * Factory de Stack<E>. Devuelve una List<E> de cualquier tipo:
+ * enlazada, doblemente enlazada o circular. Esta se decide por el paramtero
+ * listType.
+ * 
+ * @author Julio Herrera
+ * @author Jose Hurtarte
+ * 
+ */
 class ListFactory<E> {
     //se utiliza el patron Factory
   
