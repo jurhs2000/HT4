@@ -6,6 +6,9 @@
  * IMPORTANTE: Esta clase implementa a si misma el patron de diseño
  * SINGLETON
  * 
+ * Se implemento el patron utilizando un metodo estatico como lo muestra
+ * el libro Desings Patterns de James W. Cooper
+ * 
  * 
  * @author Julio Herrera
  * @author Jose Hurtarte
