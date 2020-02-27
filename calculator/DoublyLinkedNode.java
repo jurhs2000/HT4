@@ -26,6 +26,12 @@ public DoublyLinkedNode<E> previous(){
     return previousElement;
 }
 
+public E value()
+// post: returns value associated with this element
+{
+   return data;
+}
+
 
 public void setNext(DoublyLinkedNode<E> next){
     nextElement = next;

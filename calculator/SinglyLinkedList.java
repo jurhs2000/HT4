@@ -1,4 +1,5 @@
 import java.util.Iterator;
+//import static org.junit.Assert.*;
 
 public class SinglyLinkedList<E> extends abstractList<E>
 {
@@ -12,7 +13,7 @@ public class SinglyLinkedList<E> extends abstractList<E>
       head = null;
       count = 0;
    }
-   
+// Necesario implementar para Stack
    public int size()
    // post: returns number of elements in list
   {
@@ -44,7 +45,7 @@ public class SinglyLinkedList<E> extends abstractList<E>
   {
       return head.value();
   }
-  
+//Necesario implementar para Stack
   public void addLast(E value)
   // post: adds value to end of list
   {
@@ -65,6 +66,15 @@ public class SinglyLinkedList<E> extends abstractList<E>
 	  count++;
 	  
    }
+  
+  /**
+   * 
+   * @param value
+   */
+  public void push(E value) {
+	  addLast(value);
+	  
+  }
    
    
    public boolean contains(E value)
@@ -86,17 +96,52 @@ public void clear() {
 	// TODO Auto-generated method stub
 	
 }
-
+//Necesario implementar para Stack
 @Override
 public E getLast() {
 	// TODO Auto-generated method stub
 	return null;
 }
 
+public E peek() {
+	return getLast();
+}
+
+// Necesario implementar para Stack
 @Override
 public E removeLast() {
-	// TODO Auto-generated method stub
-	return null;
+	// pre: list is not empty
+	// post: removes last value from list
+	
+	Node<E> finger = head;
+	Node<E> previous = null;
+	//Assert.pre(head != null,"List is not empty.");
+	while (finger.next() != null) // find end of list
+	{
+	previous = finger;
+	finger = finger.next();
+	}
+	// finger is null, or points to end of list
+	if (previous == null)
+	{
+	// has exactly one element
+	head = null;
+	}
+	else
+	{
+	// pointer to last element is reset
+	previous.setNext(null);
+	}
+	count--;
+	return finger.value();
+}
+
+/**
+ * 
+ * @return
+ */
+public E pop() {
+	return removeLast();
 }
 
 @Override

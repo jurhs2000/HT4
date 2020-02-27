@@ -24,7 +24,7 @@ public class DoublyLinkedList<E> extends abstractList<E>{
 		if (tail == null) tail = head;
 		count++;
 	}
-
+	// Necesario implementar para Stack
 
 	public void addLast(E value)
 	// pre: value is not null
@@ -36,8 +36,15 @@ public class DoublyLinkedList<E> extends abstractList<E>{
 		if (head == null) head = tail;
 		count++;
 	}
+	/**
+	 * 
+	 * @param value
+	 */
+	public void push(E value) {
+		addLast(value);
+	}
 
-
+	// Necesario implementar para Stack
 	public E removeLast()
 	// pre: list is not empty
 	// post: removes value from tail of list
@@ -52,12 +59,23 @@ public class DoublyLinkedList<E> extends abstractList<E>{
 		count--;
 		return temp.data;
 	}
+	/**
+	 * 
+	 * @return
+	 */
+	public E pop() {
+		return removeLast();
+	}
+	
+	public E peek() {
+		return tail.value();
+	}
 
 
 	@Override
 	public int size() {
 		// TODO Auto-generated method stub
-		return 0;
+		return count;
 	}
 
 
@@ -75,6 +93,7 @@ public class DoublyLinkedList<E> extends abstractList<E>{
 	}
 
 
+	// Necesario implementar para Stack
 	@Override
 	public E getLast() {
 		// TODO Auto-generated method stub
