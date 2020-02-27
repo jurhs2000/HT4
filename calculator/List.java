@@ -1,3 +1,14 @@
+/**
+ * 
+ * Interfaz de Lista con dato generico. Esta interfaz propone todos los metodos
+ * necesarios para poder implementar listas enlazadas, doblemente enlazadas y
+ * circulares, incluyendo los metodos basicos para insertar, eliminar y
+ * obtener los metodos de una lista
+ * 
+ * @author Julio Herrera
+ * @author Jose Hurtarte
+ * 
+ */
 import java.util.Iterator;
 
 public interface List<E> 
