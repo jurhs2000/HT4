@@ -9,11 +9,11 @@ class ListFactory<E> {
   public Stack<E> getStack(int listType) {
     switch (listType) {
       case 1:
-        return new SinglyLinkedList<E>();
+        //return new SinglyLinkedList<E>();
       case 2:
-        return new DoublyLinkedList<E>();
+        //return new DoublyLinkedList<E>();
       case 3:
-        return new CircularList<E>();
+        //return new CircularList<E>();
       default:
         return null;
     }

@@ -1,18 +1,31 @@
-//Jose Hurtarte
-//Julio Herrera
-public class Calculator implements iCalculator{
+/**
+ * Calculadora basica implementando operaciones basicas y
+ * definiendo sus metodos y excepciones
+ * 
+ * 
+ * IMPORTANTE: Esta clase implementa a si misma el patron de diseño
+ * SINGLETON
+ * 
+ * 
+ * @author Julio Herrera
+ * @author Jose Hurtarte
+ */
+public class Calculator implements BasicOperations {
 
 	/**
+	 * SINGLETON
 	 * A static Calculator to be the unic instance
 	 */
 	private static Calculator calculator;
 
-	/*
+	/**
+	 * SINGLETON
 	 * for singleton implementation a private constructor is implemented
 	*/
 	private Calculator() {}
 
 	/**
+	 * SINGLETON
 	 * A static method to instance the unic calculator or get it
 	 * pre: --
 	 * @post: it can return null
@@ -25,37 +38,46 @@ public class Calculator implements iCalculator{
 	}
 
 	/**
-	 * suma los parametros y los devuelve
+	 * SUMA
+	 * @pre requires 2 numbres
+	 * @post addition numbre b to number a
 	 */
 	@Override
-	public int suma(int a, int b) {
+	public int add(int a, int b) {
 		
 		return a+b;
 	}
 
 	/**
-	 * resta los parametros y los devuelve
+	 * RESTA
+	 * @pre: requires 2 numbers
+	 * @post: substract number b to number a
 	 */
 	@Override
-	public int resta(int a, int b) {
+	public int subtract(int a, int b) {
 		
 		return a-b;
 	}
 
 	/**
-	 * multiplica los parametros y los devuelve
+	 * MULTIPLICACION
+	 * @pre: requires 2 numbers
+	 * @post: multiply number a, b times
 	 */
 	@Override
-	public int multiplicacion(int a, int b) {
+	public int multiply(int a, int b) {
 		
 		return a*b;
 	}
 
 	/**
-	 *divide los parametros y da el entero mas cercano si es decimal
+	 * DIVISION
+	 * @param b This param can't be 0
+	 * @pre: requires 2 numbers, number b can't be 0
+	 * @post: split number a in b parts, return the quotient
 	 */
 	@Override
-	public int division(int a, int b) {
+	public int divide(int a, int b) {
 		try {
 			return a/b;
 		} catch (Exception e) {
